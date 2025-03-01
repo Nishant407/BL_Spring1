@@ -35,5 +35,10 @@ public class HelloController {
         return "Hello " + name + " from BridgeLabz";
         //http://localhost:8080/hello/query?name=Mark --- to run
     }
+    @GetMapping("/param/{name}")
+    public String sayHelloWithPathVar(@PathVariable String name) {
+        return "Hello " + name + " from BridgeLabz";
+        //http://localhost:8080/hello/param/Nishant  ----to run
+    }
 
 }
