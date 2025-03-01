@@ -1,5 +1,6 @@
 package com.example.FirstSpringApp.controller;
 
+import com.example.FirstSpringApp.model.Message;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -40,5 +41,8 @@ public class HelloController {
         return "Hello " + name + " from BridgeLabz";
         //http://localhost:8080/hello/param/Nishant  ----to run
     }
-
+    @PostMapping("post")
+    public String greetWithRequestBody(@RequestBody Message names){
+        return "Hello, "+names.getFirstName()+" "+names.getLastName();
+    }
 }
