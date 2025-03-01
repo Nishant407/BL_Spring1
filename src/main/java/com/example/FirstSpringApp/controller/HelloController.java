@@ -30,5 +30,10 @@ public class HelloController {
         return "Goodbye, " + name + " from BridgeLabz";
 
     }
+    @GetMapping("/query")
+    public String sayHelloWithQueryParam(@RequestParam String name) {
+        return "Hello " + name + " from BridgeLabz";
+        //http://localhost:8080/hello/query?name=Mark --- to run
+    }
 
 }
